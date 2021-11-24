@@ -1,0 +1,12 @@
+/* bagian import module luar */
+
+
+/* koneksi css ke taillwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.main{
+    min-height:  calc(100vh- theme("spacing.16"));
+}
