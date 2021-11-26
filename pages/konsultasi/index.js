@@ -1,9 +1,9 @@
 import Layout from "../../components/Layout"
 
-export default function faq() {
+export default function konsultasi() {
     return (
         <Layout>
-            f.a.q
+            konsultasi
         </Layout>
     )
 }
