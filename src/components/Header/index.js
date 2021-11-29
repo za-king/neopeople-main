@@ -12,8 +12,8 @@ export default function Header() {
     <>
       {/* <Sidebar /> */}
       <nav
-        className="bg-red-100 flex justify-between items-center h-16 text-black
-      relative "
+        className="bg-white flex justify-between items-center h-16 text-black
+      fixed w-full top-0"
       >
         <div className="px-4 cursor-pointer md:hidden" onClick={handleClick}>
           <div>

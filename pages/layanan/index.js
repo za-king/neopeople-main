@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from '../../components/Layout'
-import Layanan from '../../components/Layanan'
+import Layout from '../../src/components/Layout'
+import LayananPage from '../../src/components/LayananPage'
 export default function layanan() {
     return (
         <Layout>
-            <Layanan />
+            <LayananPage/>
         </Layout>
     )
 }

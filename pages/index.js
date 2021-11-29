@@ -9,13 +9,12 @@ export default function Beranda() {
   return (
     <>
     <Layout>
-    <Hero />
-    <Layanan />
-    <Apa />
-    <Attention />
-    <Media />
+      <Hero />
+      <Layanan />
+      <Apa />
+      <Media />
+      <Attention />
     </Layout>
-
     </>
     
   )
