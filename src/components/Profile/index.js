@@ -9,7 +9,8 @@ import Typography from "@mui/material/Typography";
 export default function Profile() {
   return (
     <>
-      <div
+    <div className=" bg-[#F4F8FE] h-[120vh] justify-center flex flex-col items-center" >
+    <div
         className=" 
     grid grid-cols-1
     lg:grid-cols-4 lg:gap-4
@@ -101,6 +102,8 @@ export default function Profile() {
           </div>
         </div>
       </div>
+    </div>
+     
     </>
   );
 }
