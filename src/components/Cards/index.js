@@ -167,6 +167,7 @@ export default function MultiActionAreaCard(image) {
                 <Button size="small" color="primary">
                   Nama event
                 </Button>
+                <hr></hr>
                 <p>Rp.100.000</p>
               </CardActions>
             </Card>
