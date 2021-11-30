@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function EventDetailComp() {
   return (
     <>
-      <div className="flex  justify-center">
+      <div className="bg-[#F4F8FE] h-[120vh] justify-center flex flex-col items-center">
         <div className="">
           <Image src="/Neo-people-logo.png" width={550} height={500} alt="fe" />
         </div>
