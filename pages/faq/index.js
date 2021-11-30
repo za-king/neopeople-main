@@ -1,9 +1,9 @@
 import Layout from "../../src/components/Layout"
-
+import FaqComp from '../../src/components/FaqComp'
 export default function faq() {
     return (
         <Layout>
-            f.a.q
+            <FaqComp />
         </Layout>
     )
 }
