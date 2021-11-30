@@ -10,7 +10,7 @@ const successAlert = () => {
 };
 export default function BuktiPembComp() {
   return (
-    <div className="justify-center">
+    <div className="bg-[#F4F8FE] h-[120vh] justify-center flex flex-col items-center">
       <form className="w-full max-w-lg justify-items-center">
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
