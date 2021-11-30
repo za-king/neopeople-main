@@ -12,29 +12,32 @@ export default function FaqComp() {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <div>
-      <Accordion
-        expanded={expanded === "panel1"}
-        onChange={handleChange("panel1")}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
+    <div className=" bg-[#F4F8FE] h-[100vh] justify-center flex flex-col items-stretch">
+      <div className='p-20  pb-3 '>
+        <Accordion
+          expanded={expanded === "panel1"}
+          onChange={handleChange("panel1")}
         >
-          <Typography sx={{ width: "50%", flexShrink: 0 }}>
-            Apa itu Neo People?
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Neo People merupakan sebuah komunitas yang dibentuk untuk
-            meningkatkan kesadaran tentang kesehatan mental serta mengajak
-            SobatNeo untuk menjadi pribadi yang produktif.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ width: "50%", flexShrink: 0 }}>
+              Apa itu Neo People?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Neo People merupakan sebuah komunitas yang dibentuk untuk
+              meningkatkan kesadaran tentang kesehatan mental serta mengajak
+              SobatNeo untuk menjadi pribadi yang produktif.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </div>
 
+      <div className='p-20 pt-0 pb-3'>
       <Accordion
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
@@ -56,6 +59,9 @@ export default function FaqComp() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </div>
+
+      <div className='p-20 pt-0 pb-3'>
       <Accordion
         expanded={expanded === "panel3"}
         onChange={handleChange("panel3")}
@@ -78,6 +84,9 @@ export default function FaqComp() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </div>
+      
+      <div className='p-20 pt-0 pb-3'>
       <Accordion
         expanded={expanded === "panel4"}
         onChange={handleChange("panel4")}
@@ -99,6 +108,9 @@ export default function FaqComp() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </div>
+      
+      <div className='p-20 pt-0 pb-100'>
       <Accordion
         expanded={expanded === "panel5"}
         onChange={handleChange("panel5")}
@@ -114,20 +126,23 @@ export default function FaqComp() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Keuntungan kamu masuk grup komunitas #TumbuhBersama : 
-            1.Kamu dapat daftar lebih dulu (Pre-Order) event terdekat kami sebelum poster
-            event di launching secara resmi 
+            Keuntungan kamu masuk grup komunitas #TumbuhBersama : 1.Kamu dapat
+            daftar lebih dulu (Pre-Order) event terdekat kami sebelum poster
+            event di launching secara resmi
             <br></br>
-            2.Kamu bisa curhat masalah apapun yang sedang kamu hadapi tanpa takut mendapatkan label atau judgement dari
-            orang lain 
+            2.Kamu bisa curhat masalah apapun yang sedang kamu hadapi tanpa
+            takut mendapatkan label atau judgement dari orang lain
             <br></br>
-            3.Kamu berpeluang mendapatkan layanan khusus yang hanya
-            diperuntukan untuk anggota komunitas
+            3.Kamu berpeluang mendapatkan layanan khusus yang hanya diperuntukan
+            untuk anggota komunitas
             <br></br>
-            4.Kamu berpeluang mendapatkan harga spesial untuk event/layanan berbayar kami
+            4.Kamu berpeluang mendapatkan harga spesial untuk event/layanan
+            berbayar kami
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </div>
+      
     </div>
   );
 }
