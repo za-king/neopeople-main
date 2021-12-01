@@ -5,6 +5,7 @@ import Apa from "../src/components/Apa"
 import Attention from "../src/components/Attention"
 import Media from "../src/components/Media"
 
+
 export default function Beranda() {
   return (
     <>
