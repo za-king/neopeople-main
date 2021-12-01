@@ -1,10 +1,9 @@
 import Layout from "../../src/components/Layout"
-import Profile from "../../src/components/Profile"
-
+import TeamPage from "../../src/components/team"
 export default function team() {
     return (
         <Layout>
-            <Profile />
+            <TeamPage/>
         </Layout>
     )
 }

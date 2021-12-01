@@ -1,4 +1,9 @@
 /* bagian import module luar */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@font-face {
+    font-family: "TentangNanti";
+    src: url("../public/fonts/TentangNanti/TNanti-Demo.otf");
+}
 
 
 /* koneksi css ke taillwind */
@@ -9,4 +14,8 @@
 
 .main{
     min-height:  calc(100vh- theme("spacing.16"));
+}
+
+.hero_text{
+    font-family: TentangNanti;
 }
