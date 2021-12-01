@@ -5,12 +5,63 @@ import { useState } from "react";
 
 export default function Header() {
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
 
   return (
     <>
-      {/* <Sidebar /> */}
+      {click && (
+        <aside
+          className=" bg-white w-64  h-full left-0  
+      inset-y-0 flex flex-col md:hidden fixed transform 
+      translate-x-0 transition duration-200 ease-in-out
+      "
+        >
+          <div className="border-r flex-grow">
+            <nav>
+              <ul className="">
+                <li className="p-3 mt-20">
+                  <Link className="" href="/">
+                    Beranda
+                  </Link>
+                </li>
+                <li className="p-3">
+                  <Link className="" href="/layanan">
+                    Layanan
+                  </Link>
+                </li>
+                <li className="p-3">
+                  {" "}
+                  <Link className="p-4" href="/team">
+                    Team
+                  </Link>
+                </li>
+                <li className="p-3">
+                  <Link className="p-4" href="/eventsPages">
+                    Events
+                  </Link>
+                </li>
+                <li className="p-3">
+                  <Link className="p-4" href="/konsultasi">
+                    konsultasi
+                  </Link>
+                </li>
+                <li className="p-3">
+                  <Link className="p-4" href="/faq">
+                    F.A.Q
+                  </Link>
+                </li>
+
+                <li className="p-3">
+                  <Link className="p-4" href="/.">
+                    Login
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+      )}
+
       <nav
         className="bg-white flex justify-between items-center h-16 text-black
       fixed w-full top-0"
@@ -82,7 +133,6 @@ export default function Header() {
           <Link className="p-4" href="/konsultasi">
             konsultasi
           </Link>
-          
 
           <Link className="p-4" href="/faq">
             F.A.Q
@@ -91,9 +141,6 @@ export default function Header() {
           <Link className="p-4" href="/.">
             Login
           </Link>
-          
-
-          
         </div>
       </nav>
     </>
