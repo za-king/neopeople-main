@@ -5,7 +5,7 @@ import { SiBookstack } from 'react-icons/si'
 
 export default function Layanan() {
     return (
-        <div className=" bg-[#F4F8FE] h-[60vh] justify-center flex flex-col items-center" >
+        <div className=" bg-[#F4F8FE] h-[100vh] justify-center flex flex-col items-center" >
             <div className=" w-full h-[30%] flex justify-center items-center" >
                 <div className="text-6xl font-sans font-thin">Layanan Kami</div>
             </div>
