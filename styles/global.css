@@ -1,21 +1,56 @@
 /* bagian import module luar */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 @font-face {
-    font-family: "TentangNanti";
-    src: url("../public/fonts/TentangNanti/TNanti-Demo.otf");
+  font-family: "TentangNanti";
+  src: url("../public/fonts/TentangNanti/TNanti-Demo.otf");
 }
-
 
 /* koneksi css ke taillwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-.main{
-    min-height:  calc(100vh- theme("spacing.16"));
+.main {
+  min-height: calc(100vh- theme("spacing.16"));
 }
 
-.hero_text{
-    font-family: TentangNanti;
+.hero_text {
+  font-family: TentangNanti;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
 }
