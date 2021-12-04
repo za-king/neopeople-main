@@ -21,7 +21,7 @@ export default function SwiperComp() {
   return (
     <>
       <Swiper
-        className="swiper w-24"
+        className="swiper"
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
@@ -31,7 +31,7 @@ export default function SwiperComp() {
         navigation={true}
         className="mySwiper"
       >
-        <SwiperSlide className="swiper-slide w-24 h-[50%]">
+        <SwiperSlide className="swiper-slide ">
           <div className="w-[full] h-full flex flex-row justify-center items-center">
             <div className="bg-[#E4E4E4] h-full w-[100%] flex flex-row justify-center items-center rounded">
               <div className="w-[30%] h-full bg-blue-200 relative overflow-hidden rounded">
