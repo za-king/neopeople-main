@@ -20,6 +20,7 @@ export default function Apa() {
   return (
     <>
       <div className=" flex bg-[#050C44] h-[95vh] ">
+        {/* //comp 1 */}
         <div className="m-[60px] flex justify-center flex-col items-start w-full">
           <div className="text-4xl h-[10%] text-white font-thin">
             Apa kata mereka?
@@ -29,8 +30,10 @@ export default function Apa() {
           </div>
         </div>
 
+
+        {/* comp 2 */}
         <Swiper
-        className="swiper w-24"
+        className="swiper "
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
@@ -40,7 +43,7 @@ export default function Apa() {
         navigation={true}
         className="mySwiper"
       >
-        <SwiperSlide className="swiper-slide w-24 h-[50%]">
+        <SwiperSlide className="swiper-slide">
           <div className="w-[full] h-full flex flex-row justify-center items-center">
             <div className="bg-[#E4E4E4] h-full w-[100%] flex flex-row justify-center items-center rounded">
               <div className="w-[30%] h-full bg-blue-200 relative overflow-hidden rounded">
