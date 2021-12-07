@@ -1,4 +1,4 @@
-import postcss from "postcss";
+
 
 export async function getServerSideProps() {
   const getpost = await fetch(`https://jsonplaceholder.typicode.com/users`);
