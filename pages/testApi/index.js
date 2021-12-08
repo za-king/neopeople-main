@@ -11,7 +11,7 @@ export async function getServerSideProps() {
 export default function tesApi({ posts }) {
   console.log(posts);
   return (
-    <div>
+    <div className=''>
       {posts.map((post) => {
         return (
           <div key={post.id}>
