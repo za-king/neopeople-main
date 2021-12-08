@@ -138,7 +138,7 @@ export default function Header() {
             F.A.Q
           </Link>
 
-          <Link className="p-4" href="/.">
+          <Link className="p-4" href="/login">
             Login
           </Link>
         </div>
