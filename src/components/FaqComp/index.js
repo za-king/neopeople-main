@@ -8,7 +8,14 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
+
+
 export default function FaqComp() {
+  const data = [
+    { "title1": "Apa itu Neo People?", "body1": "Neo People merupakan sebuah komunitas yang dibentuk untuk meningkatkan kesadaran tentang kesehatan mental serta mengajak SobatNeo untuk menjadi pribadi yang produktif" },
+    { "title2": "Apa itu #TumbuhBersama ?", "body2": "#TumbuhBersama merupakan tagline dan juga prinsip dari kami untuk merangkul SobatNeo menikmati proses kehidupan bersama dengan orientasi terus bertumbuh menjadi pribadi yang lebih baik." },
+  ];
+
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -17,12 +24,11 @@ export default function FaqComp() {
   return (
     <>
       <div className=" bg-[#F4F8FE] h-[100vh] justify-center flex flex-col items-stretch">
-        
         <div className="justify-center flex flex-col items-center">
           <h1 className="flex text-4xl font-sans font-thin">F.A.Q</h1>
         </div>
 
-        <div className='justify-center flex flex-col items-center p-5'>
+        <div className="justify-center flex flex-col items-center p-5">
           <Stack direction="row" spacing={2}>
             <Button variant="outlined">Profle</Button>
             <Button variant="outlined">Mentoring</Button>
@@ -41,14 +47,12 @@ export default function FaqComp() {
               id="panel1bh-header"
             >
               <Typography sx={{ width: "50%", flexShrink: 0 }}>
-                Apa itu Neo People?
+                {data[0].title1}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Neo People merupakan sebuah komunitas yang dibentuk untuk
-                meningkatkan kesadaran tentang kesehatan mental serta mengajak
-                SobatNeo untuk menjadi pribadi yang produktif.
+                {data[0].body1}
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -65,15 +69,12 @@ export default function FaqComp() {
               id="panel2bh-header"
             >
               <Typography sx={{ width: "33%", flexShrink: 0 }}>
-                Apa itu #TumbuhBersama ?
+              {data[1].title2}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                #TumbuhBersama merupakan tagline dan juga prinsip dari kami
-                untuk merangkul SobatNeo menikmati proses kehidupan bersama
-                dengan orientasi terus bertumbuh menjadi pribadi yang lebih
-                baik.
+              {data[1].body2}
               </Typography>
             </AccordionDetails>
           </Accordion>

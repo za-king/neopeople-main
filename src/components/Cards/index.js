@@ -39,7 +39,7 @@ export default function MultiActionAreaCard({ photos }) {
       >
         <div className="p-10">
           <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
-            <Link href="/eventdetail" passHref>
+            <Link href="/eventsPages/eventdetail" >
               <Card sx={{ maxWidth: 300 }}>
                 <CardActionArea>
                   <CardMedia
