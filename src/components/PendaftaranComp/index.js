@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import Swal from 'sweetalert2'
 
 const successAlert = () => {
@@ -79,7 +78,7 @@ export default function PendaftaranComp() {
         </div>
       </form>
 
-      <Link href="/buktipembayaran" passHref>
+      <Link href="/eventsPages/eventdetail/pendaftaran/buktipembayaran" passHref>
         <div className="md:flex md:items-center">
           <div className="md:w-1/3"></div>
           <div className="md:w-2/3">
