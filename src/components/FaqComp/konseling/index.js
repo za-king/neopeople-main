@@ -5,9 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-import Link from "next/link";
-
-export default function FaqComp() {
+export default function konseling() {
   const data = [
     {
       title0: "Apa itu Neo People?",
@@ -50,11 +48,9 @@ export default function FaqComp() {
           <button className="bg-[#FFFFFF] hover:bg-[#FA1E0E] shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
             Mentoring
           </button>
-          <Link href="/">
-            <button className="bg-[#FFFFFF] hover:bg-[#FA1E0E] shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
-              Konseling
-            </button>
-          </Link>
+          <button className="bg-[#FFFFFF] hover:bg-[#FA1E0E] shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
+            Konseling
+          </button>
         </div>
 
         <div className="p-20  pb-3 ">

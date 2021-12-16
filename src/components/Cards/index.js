@@ -29,173 +29,143 @@ export default function MultiActionAreaCard({ photos }) {
         })}
       </div> */}
 
-      <div
-        className=" 
-          grid grid-cols-1
-          lg:grid-cols-4 lg:gap-4
-          justify-items-center
-          mt-10
-           "
-      >
-        <div className="p-10">
-          <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
-            <Link href="/eventsPages/eventdetail" >
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image="https://picsum.photos/300/300"
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Nama event
-                  </Button>
-                  <p>Rp.100.000</p>
-                </CardActions>
-              </Card>
-            </Link>
+      <div className="bg-[#F4F8FE] w-full h-full">
+        <div className="h-[20%] pt-36 w-full flex justify-end items-center flex-col">
+          <div className="text-4xl font-sans font-thin">EVENT</div>
+        </div>
+
+        <div className=" ml-24 w-full flex justify-star  flex-col">
+          <div className="text-3xl font-sans font-thin">UPCOMING EVENT</div>
+        </div>
+        <div className=" grid grid-cols-2 lg:grid-cols-3 lg:gap-4 justify-items-center mt-10 ">
+          <div className="p-10">
+            <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
+              <Link href="/eventsPages/eventdetail">
+                <Card sx={{ maxWidth: 300 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image="https://picsum.photos/300/300"
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        tgl Event 1
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        harga
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Link>
+            </div>
+          </div>
+
+          <div className="p-10">
+            <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
+              <Link href="/eventsPages/eventdetail">
+                <Card sx={{ maxWidth: 300 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image="https://picsum.photos/300/300"
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        tgl Event 1
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        harga
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Link>
+            </div>
+          </div>
+          <div className="p-10">
+            <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
+              <Link href="/eventsPages/eventdetail">
+                <Card sx={{ maxWidth: 300 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image="https://picsum.photos/300/300"
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        tgl Event 1
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        harga
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="p-10">
-          <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
-            <Link href="/eventdetail" passHref>
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image="https://picsum.photos/300/300"
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Nama event
-                  </Button>
-                  <p>Rp.100.000</p>
-                </CardActions>
-              </Card>
-            </Link>
-          </div>
+        <div className=" ml-24 w-full flex justify-star  flex-col">
+          <div className="text-3xl font-sans font-thin">COMPLETED EVENT</div>
         </div>
-        <div className="p-10">
-          <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
-            <Link href="/eventdetail" passHref>
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image="https://picsum.photos/300/300"
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Nama event
-                  </Button>
-                  <p>Rp.100.000</p>
-                </CardActions>
-              </Card>
-            </Link>
+
+        <div className=" grid grid-cols-2 lg:grid-cols-3 lg:gap-4 justify-items-center mt-10 ">
+          <div className="p-10">
+            <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
+              <Link href="/eventsPages/eventdetail">
+                <Card sx={{ maxWidth: 300 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image="https://picsum.photos/300/300"
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        tgl Event 1
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        harga
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="p-10">
-          <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
-            <Link href="/eventdetail" passHref>
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image="https://picsum.photos/300/300"
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Nama event
-                  </Button>
-                  <p>Rp.100.000</p>
-                </CardActions>
-              </Card>
-            </Link>
-          </div>
-        </div>
-        <div className="p-10">
-          <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
-            <Link href="/eventdetail" passHref>
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image="https://picsum.photos/300/300"
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Nama event
-                  </Button>
-                  <p>Rp.100.000</p>
-                </CardActions>
-              </Card>
-            </Link>
+
+          <div className="p-10">
+            <div className="rounded overflow-hidden shadow-lg max-w-sm  ">
+              <Link href="/eventsPages/eventdetail">
+                <Card sx={{ maxWidth: 300 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image="https://picsum.photos/300/300"
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        tgl Event 1
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        harga
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

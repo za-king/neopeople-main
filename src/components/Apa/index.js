@@ -19,83 +19,88 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 export default function Apa() {
   return (
     <>
-      <div className=" flex bg-[#050C44] h-[95vh] ">
-        {/* //comp 1 */}
-        <Fade left>
-          <div className="m-[60px] flex justify-center flex-col items-start w-full">
-            <div className="text-4xl h-[10%] text-white font-thin">
+      <div className=" flex bg-[#050C44] w-screen h-screen  ">
+        <div className="flex flex-col">
+          <div className="flex mt-24 flex-col ml-[161px] ">
+            <div className="text-2xl  text-white font-thin">
               Apa kata mereka?
             </div>
-            <div className="text-2xl h-[20%] text-white font-thin w-[20%]">
+            <div className="text-4xl text-white font-thin w-3/4 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </div>
           </div>
-        </Fade>
+          <div className="flex flex-col justify-center items-center px-48 pt-20 ">
+            <div className="w-[1124.26px] h-[354px] bg-gray-300  rounded ">
+              <Swiper
+                className="swiper "
+                slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                autoplay={{
+                  "delay": 4500,
+                  "disableOnInteraction": false
+                }}
+                className="mySwiper "
+              >
+                <SwiperSlide className="swiper-slide">
+                  <div className="w-[full] h-full flex flex-row justify-center items-center">
+                    <div className="bg-[#E4E4E4] h-full w-[100%] flex flex-row justify-center items-center rounded">
+                      <div className="w-[30%] h-full bg-blue-200 relative overflow-hidden rounded">
+                        <Image src={Profile} height={100} layout="fill" />
+                      </div>
+                      <div className="w-[70%] px-8 flex justify-center flex-col items-center">
+                        <div className="flex w-full justify-start">
+                          <ImQuotesLeft size={60} />
+                        </div>
+                        <div className="text-left w-[90%]">
+                          Alhamdulillah setelah aku kenal Neo People ada
+                          perubahan hidup pelan-pelan seperti sekarang agak
+                          tegar kalau menghadapi masalah, terus lingkungan juga
+                          merasakan emosional aku lebih stabil. Terima kasih yaa
+                          Neo People sudah membentuk komunitas yang bermanfaat,
+                          semoga kita bisa selalu #tumbuhbersama
+                        </div>
+                        <div className="flex w-full justify-end">
+                          <ImQuotesRight size={60} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-        {/* comp 2 */}
-        <Swiper
-          className="swiper "
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          className="mySwiper"
-        >
-          <SwiperSlide className="swiper-slide">
-            <div className="w-[full] h-full flex flex-row justify-center items-center">
-              <div className="bg-[#E4E4E4] h-full w-[100%] flex flex-row justify-center items-center rounded">
-                <div className="w-[30%] h-full bg-blue-200 relative overflow-hidden rounded">
-                  <Image src={Profile} height={100} layout="fill" />
-                </div>
-                <div className="w-[70%] px-8 flex justify-center flex-col items-center">
-                  <div className="flex w-full justify-start">
-                    <ImQuotesLeft size={60} />
+                <SwiperSlide className="swiper-slide">
+                  <div className="w-[full] h-full flex flex-row justify-center items-center ">
+                    <div className="bg-[#E4E4E4] h-full w-[100%] flex flex-row justify-center items-center rounded">
+                      <div className="w-[30%] h-full bg-blue-200 relative overflow-hidden rounded">
+                        <Image src={Profile} height={100} layout="fill" />
+                      </div>
+                      <div className="w-[70%] px-8 flex justify-center flex-col items-center">
+                        <div className="flex w-full justify-start">
+                          <ImQuotesLeft size={60} />
+                        </div>
+                        <div className="text-left w-[90%]">
+                          Alhamdulillah setelah aku kenal Neo People ada
+                          perubahan hidup pelan-pelan seperti sekarang agak
+                          tegar kalau menghadapi masalah, terus lingkungan juga
+                          merasakan emosional aku lebih stabil. Terima kasih yaa
+                          Neo People sudah membentuk komunitas yang bermanfaat,
+                          semoga kita bisa selalu #tumbuhbersama
+                        </div>
+                        <div className="flex w-full justify-end">
+                          <ImQuotesRight size={60} />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-left w-[90%]">
-                    Alhamdulillah setelah aku kenal Neo People ada perubahan
-                    hidup pelan-pelan seperti sekarang agak tegar kalau
-                    menghadapi masalah, terus lingkungan juga merasakan
-                    emosional aku lebih stabil. Terima kasih yaa Neo People
-                    sudah membentuk komunitas yang bermanfaat, semoga kita bisa
-                    selalu #tumbuhbersama
-                  </div>
-                  <div className="flex w-full justify-end">
-                    <ImQuotesRight size={60} />
-                  </div>
-                </div>
-              </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="swiper-slide">
-            <div className="w-[full] h-full flex flex-row justify-center items-center static">
-              <div className="bg-[#E4E4E4] h-full w-[100%] flex flex-row justify-center items-center rounded">
-                <div className="w-[30%] h-full bg-blue-200 relative overflow-hidden rounded">
-                  <Image src={Profile} height={100} layout="fill" />
-                </div>
-                <div className="w-[70%] px-8 flex justify-center flex-col items-center">
-                  <div className="flex w-full justify-start">
-                    <ImQuotesLeft size={60} />
-                  </div>
-                  <div className="text-left w-[90%]">
-                    Alhamdulillah setelah aku kenal Neo People ada perubahan
-                    hidup pelan-pelan seperti sekarang agak tegar kalau
-                    menghadapi masalah, terus lingkungan juga merasakan
-                    emosional aku lebih stabil. Terima kasih yaa Neo People
-                    sudah membentuk komunitas yang bermanfaat, semoga kita bisa
-                    selalu #tumbuhbersama
-                  </div>
-                  <div className="flex w-full justify-end">
-                    <ImQuotesRight size={60} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+          </div>
+        </div>
       </div>
     </>
   );

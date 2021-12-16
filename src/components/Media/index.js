@@ -7,9 +7,6 @@ import Fade from "react-reveal/Fade";
 export default function Media() {
   const sponsors = [Fitmind, TanyaP, SehatMental];
 
-  // const listSponsor = sponsors.map((sponsor)=>{
-
-  // })
 
   const listSponsor = [];
   for (const [index, value] of sponsors.entries()) {

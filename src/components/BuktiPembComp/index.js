@@ -10,7 +10,11 @@ const successAlert = () => {
 };
 export default function BuktiPembComp() {
   return (
-    <div className="bg-[#F4F8FE] h-[120vh] justify-center flex flex-col items-center">
+    <div className="bg-[#F4F8FE] h-full w-full justify-center flex flex-col items-center">
+      <div className="h-[20%]  mt-36 mb-8 w-full flex justify-end items-center flex-col">
+        <div className="text-4xl font-sans font-thin">PEMEBAYARAN</div>
+      </div>
+
       <form className="w-full max-w-lg justify-items-center">
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
@@ -72,7 +76,7 @@ export default function BuktiPembComp() {
           </div>
         </div>
       </form>
-      <div className="md:flex md:items-center">
+      <div className="md:flex md:items-end mb-10">
         <div className="md:w-1/3"></div>
         <div className="md:w-2/3">
           <button
