@@ -40,7 +40,7 @@ export default function FaqComp() {
     <>
       <div className=" bg-[#F4F8FE] h-[100vh] justify-center flex flex-col items-stretch">
         <div className="justify-center flex flex-col items-center">
-          <h1 className="flex text-4xl font-sans font-thin">F.A.Q</h1>
+          <h1 className="flex text-4xl font-sans font-medium">F.A.Q</h1>
         </div>
 
         <div className="justify-center flex flex-row items-center p-5 space-x-4">

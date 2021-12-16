@@ -19,7 +19,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 export default function Apa() {
   return (
     <>
-      <div className=" flex bg-[#050C44] w-screen h-screen  ">
+      <div className=" flex bg-[#050C44] w-full h-screen  ">
         <div className="flex flex-col">
           <div className="flex mt-24 flex-col ml-[161px] ">
             <div className="text-2xl  text-white font-thin">

@@ -31,7 +31,7 @@ export default function EventDetailComp() {
           <div className="  w-1/2 bg-[#F4F4F4] w-[315px]  h-[665px] rounded flex justify-around items-center flex-col  mr-20 relative">
             <Swiper navigation={true} className="mySwiper">
               <SwiperSlide>
-                <p className="indent-8 text-left p-10">
+                <p className="font-sans indent-8 text-left p-10">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptatibus doloribus incidunt culpa delectus omnis dolores,
                   sit nobis enim atque veniam ratione, quidem impedit excepturi
@@ -63,7 +63,7 @@ export default function EventDetailComp() {
               <SwiperSlide>
                 <div className="bg-[#F2F2F2] w-[614px] h-[634px] rounded-xl ">
                   <div className="flex justify-center pt-24">
-                    <div className="w-[247px] h-[147px]">
+                    <div className="w-[247px] h-[147px] ">
                       <div>Date & Time :</div>
                       <div>Sabtu 17 April 2021 </div>
                       <div>10.00-11.30</div>

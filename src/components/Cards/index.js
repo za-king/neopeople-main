@@ -31,7 +31,7 @@ export default function MultiActionAreaCard({ photos }) {
 
       <div className="bg-[#F4F8FE] w-full h-full">
         <div className="h-[20%] pt-36 w-full flex justify-end items-center flex-col">
-          <div className="text-4xl font-sans font-thin">EVENT</div>
+          <div className="text-4xl font-sans font-medium">EVENT</div>
         </div>
 
         <div className=" ml-24 w-full flex justify-star  flex-col">
