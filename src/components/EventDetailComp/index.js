@@ -28,7 +28,7 @@ export default function EventDetailComp() {
             />
           </div>
 
-          <div className="  w-1/2 bg-[#F4F4F4] w-[315px]  h-[665px] rounded flex justify-around items-center flex-col  mr-20 relative">
+          <div className="  w-1/2 bg-[#F4F4F4] w-[540px]  h-[665px] rounded flex justify-around items-center flex-col  mr-20 relative">
             <Swiper navigation={true} className="mySwiper">
               <SwiperSlide>
                 <p className="font-sans indent-8 text-left p-10">
@@ -61,7 +61,7 @@ export default function EventDetailComp() {
                 </p>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="bg-[#F2F2F2] w-[614px] h-[634px] rounded-xl ">
+                <div className="bg-[#F2F2F2] w-[540px] h-[665px] rounded-xl ">
                   <div className="flex justify-center pt-24">
                     <div className="w-[247px] h-[147px] ">
                       <div>Date & Time :</div>
@@ -95,7 +95,7 @@ export default function EventDetailComp() {
           </div>
         </div>
 
-        <div className=" pt-10 mb-5 flex justify-center">
+        <div className=" pt-10 mb-10 flex justify-center">
           <Link href="/eventsPages/eventdetail/pendaftaran" passHref>
             <button className=" bg-[#FF5800] hover:bg-[#FF3800] w-64 h-12 shadow-2xl rounded-full">
               Daftar Event
