@@ -5,15 +5,66 @@ import { useState } from "react";
 
 export default function Header() {
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
 
   return (
     <>
-      {/* <Sidebar /> */}
+      {click && (
+        <aside
+          className=" bg-white w-64  h-full left-0  
+      inset-y-0 flex flex-col md:hidden fixed transform 
+      translate-x-0 transition duration-200 ease-in-out
+      "
+        >
+          <div className="border-r flex-grow">
+            <nav>
+              <ul className="">
+                <li className="p-3 mt-20">
+                  <Link className="" href="/">
+                    Beranda
+                  </Link>
+                </li>
+                <li className="p-3">
+                  <Link className="" href="/layanan">
+                    Layanan
+                  </Link>
+                </li>
+                <li className="p-3">
+                  {" "}
+                  <Link className="p-4" href="/team">
+                    Team
+                  </Link>
+                </li>
+                <li className="p-3">
+                  <Link className="p-4" href="/eventsPages">
+                    Events
+                  </Link>
+                </li>
+                <li className="p-3">
+                  <Link className="p-4" href="/konsultasi">
+                    konsultasi
+                  </Link>
+                </li>
+                <li className="p-3">
+                  <Link className="p-4" href="/faq">
+                    F.A.Q
+                  </Link>
+                </li>
+
+                <li className="p-3">
+                  <Link className="p-4" href="/.">
+                    Login
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+      )}
+
       <nav
         className="bg-white flex justify-between items-center h-16 text-black
-      fixed w-full top-0"
+         fixed top-0 left-0 right-0 "
       >
         <div className="px-4 cursor-pointer md:hidden" onClick={handleClick}>
           <div>
@@ -63,7 +114,7 @@ export default function Header() {
         </div>
 
         <div className="pr-8 md:block hidden space-x-5 ">
-          <Link className="p-4" href="/">
+          <Link className="p-4 hover:decoration-blue-400" href="/">
             Beranda
           </Link>
 
@@ -80,20 +131,16 @@ export default function Header() {
           </Link>
 
           <Link className="p-4" href="/konsultasi">
-            konsultasi
+            Konsultasi
           </Link>
-          
 
           <Link className="p-4" href="/faq">
             F.A.Q
           </Link>
 
-          <Link className="p-4" href="/.">
+          <Link className="p-4" href="/login">
             Login
           </Link>
-          
-
-          
         </div>
       </nav>
     </>
