@@ -24,8 +24,8 @@ export default function Media() {
       }
     return (
         <div className=" flex bg-gray-300 h-screen justify-center flex-col" >
-            <div className="bg-[#FF9D69] w-full h-[15%] flex justify-center items-center">
-                <div className="text-6xl font-sans font-thin">Media Partner</div>
+            <div className="bg-[#FFBE0E] w-full h-[15%] flex justify-center items-center">
+                <div className="text-[32px] font-Montserrat font-medium">Media Partner</div>
             </div>
             <div className="bg-[#F4F8FE] w-[full] h-[85%] grid grid-cols-4 gap-8 justify-items-center px-[180px] py-[20px]">
                 {listSponsor}

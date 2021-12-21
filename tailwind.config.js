@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       fontFamily:{
         'TentangNanti':['TentangNanti', 'sans-serif'],
-        'Montserrat':['Montserrat', 'sans-serif']
+        'Montserrat':['Montserrat', 'sans-serif'],
+        'Raleway': ['Raleway', 'sans-serif']
       }
     },
   },
