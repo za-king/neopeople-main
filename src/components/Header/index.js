@@ -114,7 +114,7 @@ export default function Header() {
         </div>
 
         <div className="pr-8 md:block hidden space-x-5 ">
-          <Link className="p-4" href="/">
+          <Link className="p-4 hover:decoration-blue-400" href="/">
             Beranda
           </Link>
 
@@ -131,7 +131,7 @@ export default function Header() {
           </Link>
 
           <Link className="p-4" href="/konsultasi">
-            konsultasi
+            Konsultasi
           </Link>
 
           <Link className="p-4" href="/faq">

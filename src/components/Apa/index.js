@@ -22,9 +22,11 @@ export default function Apa() {
       <div className=" flex bg-[#050C44] w-full h-screen  ">
         <div className="flex flex-col">
           <div className="flex mt-24 flex-col ml-[161px] ">
+          <Fade bottom>
             <div className="text-2xl  text-white font-thin">
               Apa kata mereka?
             </div>
+          </Fade>
             <div className="text-4xl text-white font-thin w-3/4 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </div>

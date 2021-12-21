@@ -20,6 +20,9 @@ export default function tesApi({ posts }) {
 
             <h3>username</h3>
             <p>{post.username}</p>
+
+            <p>email</p>
+            <p>{post.email}</p>
           </div>
         );
       })}
