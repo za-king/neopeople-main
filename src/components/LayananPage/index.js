@@ -41,8 +41,8 @@ export default function LayananPage() {
         return (
         <div className=" bg-[#F4F8FE] h-[120vh] justify-center flex flex-col items-center" >
             <div className="h-[20%] w-full flex justify-end items-center flex-col">
-                <div className="text-4xl font-sans font-medium">
-                    LAYANAN
+                <div className="text-[32px] font-Montserrat font-medium">
+                    Layanan Kami
                 </div >
                 <div className="text-xl font-sans font-thin">
                     Temukan layanan Satu Persen yang sesuai untuk kamu.

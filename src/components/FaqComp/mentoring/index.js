@@ -5,7 +5,9 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function Konseling() {
+import Link from "next/link";
+
+export default function FaqComp() {
   const data = [
     {
       title0: "Apa itu Neo People?",
@@ -38,7 +40,7 @@ export default function Konseling() {
     <>
       <div className=" bg-[#F4F8FE] h-[100vh] justify-center flex flex-col items-stretch">
         <div className="justify-center flex flex-col items-center">
-          <h1 className="flex text-4xl font-sans font-thin">F.A.Q</h1>
+          <h1 className="flex text-4xl font-sans font-medium">F.A.Q</h1>
         </div>
 
         <div className="justify-center flex flex-row items-center p-5 space-x-4">
@@ -48,9 +50,11 @@ export default function Konseling() {
           <button className="bg-[#FFFFFF] hover:bg-[#FA1E0E] shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
             Mentoring
           </button>
-          <button className="bg-[#FFFFFF] hover:bg-[#FA1E0E] shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
-            Konseling
-          </button>
+          <Link href="/faq/konseling">
+            <button className="bg-[#FFFFFF] hover:bg-[#FA1E0E] shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
+              Konseling
+            </button>
+          </Link>
         </div>
 
         <div className="p-20  pb-3 ">

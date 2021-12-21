@@ -50,7 +50,7 @@ export default function FaqComp() {
           <button className="bg-[#FFFFFF] hover:bg-[#FA1E0E] shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
             Mentoring
           </button>
-          <Link href="/">
+          <Link href="/login">
             <button className="bg-[#FFFFFF] hover:bg-[#FA1E0E] shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
               Konseling
             </button>

@@ -1,5 +1,6 @@
 /* bagian import module luar */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,600&display=swap');
 @font-face {
   font-family: "TentangNanti";
   src: url("../public/fonts/TentangNanti/TNanti-Demo.otf");
