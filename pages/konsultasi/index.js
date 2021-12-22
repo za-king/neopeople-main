@@ -4,8 +4,9 @@ import OpenSesion from "../../src/components/openSesion"
 export default function konsultasi() {
     return (
         <Layout>
-            <div >
-            <OpenSesion />
+            <div className="p-20">
+                <KonsulComp />
+            {/* <OpenSesion /> */}
             </div>
            
         </Layout>
