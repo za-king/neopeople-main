@@ -1,4 +1,4 @@
-import React from "react";
+import Link from 'next/link'
 
 export default function openSesion() {
   return (
@@ -13,9 +13,12 @@ export default function openSesion() {
         <div className="font-sans text-3xl pr-48 items-center justify-center ">
           JAM 08.00-10.00
         </div>
+        <Link href="/konsultasi/pendaftaranKon">
         <div className="flex bg-[#F8F8F8] w-[196px] cursor-pointer  items-center justify-center h-[54px] rounded-full border-solid border-2 border-yellow-600">
           Daftar
         </div>
+        </Link>
+        
       </div>
 
       <div className="flex flex-row justify-center text-[#BD2001] ">
