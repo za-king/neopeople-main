@@ -61,7 +61,7 @@ export default class Demo extends React.PureComponent {
 
     return (
       <Paper>
-        <Scheduler data={data} height={660}>
+        <Scheduler data={data}  height={700}>
           <ViewState currentDate={currentDate} />
           <EditingState onCommitChanges={this.commitChanges} />
           <IntegratedEditing />
