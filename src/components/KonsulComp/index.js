@@ -23,6 +23,10 @@ import {
 
 import { appointments } from "./data";
 
+
+
+
+
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -56,15 +60,17 @@ export default class Demo extends React.PureComponent {
     });
   }
 
+   
+
   render() {
     const { currentDate, data } = this.state;
 
     return (
       <Paper>
-        <Scheduler data={data}  height={700}>
+        <Scheduler data={data} height={700}>
           <ViewState currentDate={currentDate} />
           <EditingState onCommitChanges={this.commitChanges} />
-          <IntegratedEditing />
+          {/* <IntegratedEditing /> */}
           <DayView startDayHour={9} endDayHour={19} />
           <WeekView startDayHour={9} endDayHour={19} />
 
@@ -72,10 +78,11 @@ export default class Demo extends React.PureComponent {
           <DateNavigator />
           <TodayButton />
           <ViewSwitcher />
-          <ConfirmationDialog />
           <Appointments />
-          <AppointmentTooltip showOpenButton showDeleteButton />
-          <AppointmentForm />
+          <AppointmentTooltip 
+          showOpenButton
+          showCloseButton={<Link href="/">buka</Link>}
+          />
         </Scheduler>
       </Paper>
     );
