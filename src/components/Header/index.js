@@ -41,6 +41,11 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="p-3">
+                  <Link className="p-4" href="/blog">
+                    Blog
+                  </Link>
+                </li>
+                <li className="p-3">
                   <Link className="p-4" href="/konsultasi">
                     konsultasi
                   </Link>
@@ -128,6 +133,10 @@ export default function Header() {
 
           <Link className="p-4" href="/eventsPages">
             Events
+          </Link>
+
+          <Link className="p-4" href="/blog">
+            Blog
           </Link>
 
           <Link className="p-4" href="/konsultasi">

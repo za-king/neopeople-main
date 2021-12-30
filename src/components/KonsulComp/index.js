@@ -22,9 +22,10 @@ import {
 } from "@devexpress/dx-react-scheduler-material-ui";
 
 import { appointments } from "./data";
+import { useState } from "react";
 
 
-
+cont [click , setClick] =useState()
 
 
 export default class Demo extends React.PureComponent {
@@ -78,10 +79,10 @@ export default class Demo extends React.PureComponent {
           <DateNavigator />
           <TodayButton />
           <ViewSwitcher />
-          <Appointments />
+          <Appointments onClick/>
           <AppointmentTooltip 
           showOpenButton
-          showCloseButton={<Link href="/">buka</Link>}
+          showCloseButton
           />
         </Scheduler>
       </Paper>
