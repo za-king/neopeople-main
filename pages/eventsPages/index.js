@@ -1,8 +1,17 @@
-import Cards from "../../src/components/Cards";
+import { useState ,useEffect} from "react";
+import Link from "next/link";
 import Layout from "../../src/components/Layout";
 
-export async function getServerSideProps() {
-  const getdata = await fetch(`https://jsonplaceholder.typicode.com/photos?_limit=9`);
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+
+
+
+
+export async function getStaticProps() {
+  const getdata = await fetch(
+    `https://jsonplaceholder.typicode.com/photos?_limit=9`
+  );
   const data = await getdata.json();
   return {
     props: { data },
@@ -10,6 +19,7 @@ export async function getServerSideProps() {
 }
 
 export default function events({ data }) {
+  
   return (
     <>
       <Layout>
@@ -22,10 +32,10 @@ export default function events({ data }) {
             <div className="text-3xl font-sans font-thin">UPCOMING EVENT</div>
           </div>
 
-          <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+          <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
             {data.map((photo) => {
               return (
-                <div key={photo.id}>
+                <Link href={`/eventsPages/` + photo.id} key={photo.id}>
                   <div className="my-10 flex bg-white w-[340px] h-[400px] rounded-lg drop-shadow-xl flex-col  cursor-pointer">
                     <div className="flex bg-gray-600  w-[340px] h-[250px] rounded-t-lg  ">
                       <img
@@ -41,9 +51,15 @@ export default function events({ data }) {
                       {photo.title}
                     </p>
                   </div>
-                </div>
+                </Link>
               );
             })}
+          </div>
+
+          <div className="h-[10%] p-10 w-full flex justify-end items-center flex-col md:justify-center">
+            <Stack spacing={2}>
+              <Pagination count={20} variant="outlined" shape="rounded" />
+            </Stack>
           </div>
         </div>
       </Layout>

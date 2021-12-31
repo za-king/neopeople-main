@@ -41,7 +41,7 @@ export default function MultiActionAreaCard() {
         <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
           <div className="my-10 flex bg-white w-[340px] h-[400px] rounded-lg drop-shadow-xl flex-col  cursor-pointer">
 
-            <div className="flex bg-gray-600  w-[340px] h-[250px] rounded-t-lg animate-pulse 3s">
+            <div className="flex bg-gray-600  w-[340px] h-[250px] rounded-t-lg animate-pulse ">
             <img
               className="flex  w-[356px] h-[250px] rounded-t-lg "
               src="/images/img1.jpg"
