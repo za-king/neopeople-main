@@ -7,24 +7,11 @@ export async function getServerSideProps() {
 }
 
 
-export default function MultiActionAreaCard({photos}) {
+
+export default function MultiActionAreaCard() {
   return (
     <>
-      {/* {photos.map((photo)=>{
-                return(
-                    <div key={photo.id}>
-                        <h1>{photo.albumId}</h1>
-                        <p>{photo.title}</p>
-                        <img 
-                        src={photo.url} 
-                        alt='photo' 
-                        width={100} 
-                        height={100} />
-                    </div>
-                )
-            })} */}
-
-
+    
 
       <div className="bg-[#F4F8FE] w-full h-full">
         <div className="h-[20%] pt-36 w-full flex justify-end items-center flex-col md:justify-center">

@@ -25,7 +25,7 @@ import { appointments } from "./data";
 import { useState } from "react";
 
 
-cont [click , setClick] =useState()
+
 
 
 export default class Demo extends React.PureComponent {
