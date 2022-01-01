@@ -1,4 +1,7 @@
 import { useState ,useEffect} from "react";
+import ReactPaginate from "react-paginate";
+
+
 import Link from "next/link";
 import Layout from "../../src/components/Layout";
 
