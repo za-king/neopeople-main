@@ -1,16 +1,13 @@
 import * as React from "react";
 import Link from "next/link";
 import Paper from "@material-ui/core/Paper";
-import {
-  ViewState,
-  EditingState,
-  IntegratedEditing,
-} from "@devexpress/dx-react-scheduler";
+import { ViewState, EditingState } from "@devexpress/dx-react-scheduler";
 
 import {
   Scheduler,
-  DayView,
+  MonthView,
   WeekView,
+  DayView,
   Appointments,
   DateNavigator,
   TodayButton,
@@ -22,68 +19,36 @@ import {
 } from "@devexpress/dx-react-scheduler-material-ui";
 
 import { appointments } from "./data";
-import { useState } from "react";
-
-
-
-
-
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       data: appointments,
-      currentDate: "2018-06-27",
     };
-
-    this.commitChanges = this.commitChanges.bind(this);
   }
-
-  commitChanges({ added, changed, deleted }) {
-    this.setState((state) => {
-      let { data } = state;
-      if (added) {
-        const startingAddedId =
-          data.length > 0 ? data[data.length - 1].id + 1 : 0;
-        data = [...data, { id: startingAddedId, ...added }];
-      }
-      if (changed) {
-        data = data.map((appointment) =>
-          changed[appointment.id]
-            ? { ...appointment, ...changed[appointment.id] }
-            : appointment
-        );
-      }
-      if (deleted !== undefined) {
-        data = data.filter((appointment) => appointment.id !== deleted);
-      }
-      return { data };
-    });
-  }
-
-   
 
   render() {
-    const { currentDate, data } = this.state;
+    const { data } = this.state;
 
     return (
       <Paper>
         <Scheduler data={data} height={700}>
-          <ViewState currentDate={currentDate} />
+          <ViewState defaultCurrentDate="2018-07-27" />
           <EditingState onCommitChanges={this.commitChanges} />
-          {/* <IntegratedEditing /> */}
-          <DayView startDayHour={9} endDayHour={19} />
+          <MonthView startDayHour={9} endDayHour={19} />
           <WeekView startDayHour={9} endDayHour={19} />
+          <DayView startDayHour={9} endDayHour={19} />
 
           <Toolbar />
           <DateNavigator />
           <TodayButton />
           <ViewSwitcher />
-          <Appointments onClick/>
-          <AppointmentTooltip 
-          showOpenButton
-          showCloseButton
-          />
+          <Appointments />
+
+          <AppointmentTooltip showOpenButton showCloseButton />
+          <AppointmentTooltip.Header />
+          <AppointmentTooltip.CommandButtonProps>hello</AppointmentTooltip.CommandButtonProps>
+          <AppointmentForm SelectProps />
         </Scheduler>
       </Paper>
     );
