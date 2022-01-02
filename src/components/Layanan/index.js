@@ -37,7 +37,7 @@ export default function Layanan() {
             <div className="font-Raleway font-reguler text-[24px] ">Event</div>
             <div className="w-full h-[2px] bg-[#FA1E0E]"></div>
           </div>
-          <div className={layananMenu}>
+          <div className={layananMenu} pagination={pagination} >
             <div className="font-Raleway font-reguler text-[24px] ">
               Konseling
             </div>
