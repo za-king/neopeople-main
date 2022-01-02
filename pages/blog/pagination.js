@@ -1,9 +1,6 @@
 import React from 'react';
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
 
-
-const Paginations = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -19,11 +16,10 @@ const Paginations = ({ postsPerPage, totalPosts, paginate }) => {
               {number}
             </div>
           </li>
-          
         ))}
       </ul>
     </nav>
   );
 };
 
-export default Paginations;
+export default Pagination;

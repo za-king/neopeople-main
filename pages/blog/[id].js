@@ -1,6 +1,8 @@
+import Layout from "../../src/components/Layout";
+
 export const getStaticPaths = async () => {
-  const getdata = await fetch(`https://jsonplaceholder.typicode.com/photos`);
-  const data = await getdata.json();
+  const res = await fetch(`https://jsonplaceholder.typicode.com/photos`);
+  const data = await res.json();
 
   const paths = data.map((hasil) => {
     return {
@@ -19,15 +21,24 @@ export const getStaticProps = async (context) => {
   const getdata = await fetch(
     `https://jsonplaceholder.typicode.com/photos/` + id
   );
-  const data = await getdata.json();
+  const datas = await getdata.json();
 
   return {
-    props: { datas: data },
+    props: { datas: datas },
   };
 };
 
 function blogdetail({ datas }) {
-  return <div>{datas.title}</div>;
+  return (
+    <>
+      <Layout>
+        <div className="flex   justify-center  ">
+          <img src={datas.url} width={540} height={665} alt="" />
+        </div>
+        <div className="flex justify-center">{datas.title}</div>
+      </Layout>
+    </>
+  );
 }
 
 export default blogdetail;

@@ -40,6 +40,7 @@ export const getStaticProps =async (context)=> {
 }
 
 function eventsdetail({datas}) {
+  
   return (
     <Layout>
     <div className="bg-[#F4F8FE] h-full flex flex-col justify-center ">
