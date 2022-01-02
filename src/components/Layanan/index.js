@@ -37,7 +37,7 @@ export default function Layanan() {
             <div className="font-Raleway font-reguler text-[24px] ">Event</div>
             <div className="w-full h-[2px] bg-[#FA1E0E]"></div>
           </div>
-          <div className={layananMenu} pagination={pagination} >
+          <div className={layananMenu}  >
             <div className="font-Raleway font-reguler text-[24px] ">
               Konseling
             </div>
@@ -46,7 +46,7 @@ export default function Layanan() {
             <div className="font-Raleway font-reguler text-[24px] ">Karya</div>
           </div>
         </div>
-        <Swiper pagination={pagination} className="mySwiper">
+        <Swiper pagination={pagination} className="mySwiper swiper">
           <SwiperSlide className=" bg-[#F4F8FE]">
             <div className="w-[75%] h-[60%] flex items-center justify-center pb-12">
               <div className="w-[40%] h-full flex justfiy-center items-center">
