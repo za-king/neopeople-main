@@ -47,7 +47,7 @@ export default class Demo extends React.PureComponent {
 
           <AppointmentTooltip showOpenButton showCloseButton />
           <AppointmentTooltip.Header />
-          <AppointmentTooltip.CommandButtonProps>hello</AppointmentTooltip.CommandButtonProps>
+          
           <AppointmentForm SelectProps />
         </Scheduler>
       </Paper>

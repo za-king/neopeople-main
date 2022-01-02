@@ -1,16 +1,39 @@
 import Layout from "../../src/components/Layout";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
-export async function getServerSideProps() {
-  const getdata = await fetch(
-    `https://jsonplaceholder.typicode.com/photos?_limit=9`
-  );
-  const data = await getdata.json();
-  return {
-    props: { data },
-  };
-}
+import Posts from "./post";
+import Pagination from "./pagination";
+
 
 export default function blog({ data }) {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setLoading(true);
+      const res = await axios.get(
+        "https://jsonplaceholder.typicode.com/photos?_limit=100"
+      );
+      setPosts(res.data);
+      setLoading(false);
+    };
+
+    fetchPosts();
+  }, []);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <Layout>
       <>
@@ -18,28 +41,13 @@ export default function blog({ data }) {
           <div className="h-[20%] pt-36 w-full flex justify-end items-center flex-col">
             <div className="text-4xl font-sans font-medium">Blog</div>
           </div>
-
-          <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
-            {data.map((props) => {
-              return (
-                <div key={props.id} className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg cursor-pointer">
-                  <img
-                    className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
-                    src={props.url}
-                    alt=""
-                  />
-                  <div className="p-6 flex flex-col justify-start">
-                    <h5 className="text-gray-900 text-xl font-medium mb-2">
-                      {props.albumId}
-                    </h5>
-                    <p className="text-gray-700 text-base mb-4">
-                      {props.title}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <Posts posts={currentPosts} loading={loading} />
+          
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+            paginate={paginate}
+          />
         </div>
       </>
     </Layout>

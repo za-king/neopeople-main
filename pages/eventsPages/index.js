@@ -21,6 +21,8 @@ export async function getStaticProps() {
   };
 }
 
+
+
 export default function events({ data }) {
   
   return (
