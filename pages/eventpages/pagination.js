@@ -21,7 +21,7 @@ const Pagination = ({
   }
 
   const style =
-    " flex p-4 w-[24px] h-[24px] items-center justify-center bg-gray-200 rounded-full cursor-pointer";
+    " flex p-4 w-[24px] h-[24px] active:bg-gray-600 items-center justify-center bg-gray-200 hover:bg-gray-300 border-solid border border-black  cursor-pointer";
 
   return (
     <>
