@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import Paper from "@material-ui/core/Paper";
 import { ViewState, EditingState } from "@devexpress/dx-react-scheduler";
-
+import open from "./open";
 import {
   Scheduler,
   MonthView,
@@ -46,7 +46,7 @@ export default class Demo extends React.PureComponent {
           <Appointments />
 
           <AppointmentTooltip showOpenButton showCloseButton />
-          <AppointmentTooltip.Header />
+          
           
           <AppointmentForm SelectProps />
         </Scheduler>
