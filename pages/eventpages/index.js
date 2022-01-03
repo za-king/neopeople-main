@@ -1,15 +1,16 @@
 import Layout from "../../src/components/Layout";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
-import Posts from "./post";
+import EventPosts from "./post";
 import Pagination from "./pagination";
 
-export default function blog({ data }) {
+export default function event({ data }) {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
+  const [postsPerPage] = useState(9);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -31,6 +32,7 @@ export default function blog({ data }) {
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   const [pageNumberLimit, setpageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
   const [minPageNumberLimit, setminPageNumberLimit] = useState(0);
@@ -52,14 +54,15 @@ export default function blog({ data }) {
       setminPageNumberLimit(minPageNumberLimit - pageNumberLimit);
     }
   };
+
   return (
     <Layout>
       <>
         <div className=" bg-[#F4F8FE] w-full h-full ">
           <div className="h-[20%] pt-36 w-full flex justify-end items-center flex-col">
-            <div className="text-4xl font-sans font-medium">Blog</div>
+            <div className="text-4xl font-sans font-medium">EVENT</div>
           </div>
-          <Posts posts={currentPosts} loading={loading} />
+          <EventPosts posts={currentPosts} loading={loading} />
 
           <Pagination
             previousLabel={handlePrevbtn}

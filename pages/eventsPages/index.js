@@ -35,6 +35,14 @@ export async function getServerSideProps({ query: { page = 1 } }) {
 }
 
 export default function events({ data,data2, page, length }) {
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() =>{
+    setLoading(true)
+  },[])
+
+  
   const router = useRouter();
   const lastpage = Math.ceil(length / 9);
   var lowEnd = 1;
@@ -52,11 +60,11 @@ export default function events({ data,data2, page, length }) {
             <div className="text-4xl font-sans font-medium">EVENT</div>
           </div>
 
-          <div className=" pl-12 justify-start ">
+          <div className=" pl-24 justify-start ">
             <div className="text-3xl font-sans font-thin">UPCOMING EVENT</div>
           </div>
 
-          <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
+          <div className="ml-12 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
             {data.map((photo) => {
               return (
                 <Link href={`/eventsPages/` + photo.id} key={photo.id}>
@@ -110,11 +118,11 @@ export default function events({ data,data2, page, length }) {
             </button>
           </div>
 
-          <div className=" pl-12 justify-start ">
+          <div className=" pl-24 justify-start ">
             <div className="text-3xl font-sans font-thin">COMPLETED EVENT</div>
           </div>
 
-          <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
+          <div className="m-12 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
 
             {data2.map(photo =>{
               return(

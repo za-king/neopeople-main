@@ -36,7 +36,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="p-3">
-                  <Link className="p-4" href="/eventsPages">
+                  <Link className="p-4" href="/eventpages">
                     Events
                   </Link>
                 </li>
@@ -131,7 +131,7 @@ export default function Header() {
             Team
           </Link>
 
-          <Link className="p-4" href="/eventsPages">
+          <Link className="p-4" href="/eventpages">
             Events
           </Link>
 
