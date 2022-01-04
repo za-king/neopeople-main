@@ -12,7 +12,7 @@ import {
 } from "@devexpress/dx-react-scheduler-material-ui";
 
 import { appointments } from "./appointments";
-
+import Layout from '../../src/components/Layout'
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -30,7 +30,8 @@ export default class Demo extends React.PureComponent {
     const { data, currentViewName } = this.state;
 
     return (
-      <Paper>
+      <Layout>
+        <Paper className='p-24'>
         <Scheduler data={data} height={660}>
           <ViewState
             defaultCurrentDate="2018-07-25"
@@ -54,6 +55,9 @@ export default class Demo extends React.PureComponent {
           <Appointments />
         </Scheduler>
       </Paper>
+
+      </Layout>
+      
     );
   }
 }
