@@ -4,6 +4,7 @@ import Layanan from "../src/components/Layanan";
 import Apa from "../src/components/Apa";
 import Attention from "../src/components/Attention";
 import Media from "../src/components/Media";
+import BlogComp from "../src/components/blogComp";
 
 export default function Beranda() {
   return (
@@ -13,6 +14,7 @@ export default function Beranda() {
         <Layanan />
         <Apa />
         <Media />
+        <BlogComp />
         <Attention />
       </Layout>
     </>

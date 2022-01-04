@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 
 export async function getServerSideProps() {
     const getphotos = await fetch(`https://jsonplaceholder.typicode.com/photos`);
