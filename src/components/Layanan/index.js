@@ -11,17 +11,27 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination } from "swiper";
+import SwiperCore, { Pagination ,Navigation} from "swiper";
 
 // install Swiper modules
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination ,Navigation]);
 
 export default function Layanan() {
   const pagination = {
     clickable: true,
   };
+
+  const navigation = [{
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }]
+
   const layananMenu =
     "w-[131px] flex justify-center items-center flex-col cursor-pointer";
+
+  const [click ,setClick] =useState(false);
+
+  
 
   return (
     <>
@@ -34,11 +44,11 @@ export default function Layanan() {
 
         <div className="w-[1080px] h-[10%] flex items-center pb-12 justify-center flex-row ">
           <div className={layananMenu}>
-            <div className="font-Raleway font-reguler text-[24px] ">Event</div>
+            <div className="font-Raleway font-reguler text-[24px]  ">Event</div>
             <div className="w-full h-[2px] bg-[#FA1E0E]"></div>
           </div>
           <div className={layananMenu}  >
-            <div className="font-Raleway font-reguler text-[24px] ">
+            <div className="font-Raleway font-reguler text-[24px] " navigation={true}  >
               Konseling
             </div>
           </div>
@@ -46,7 +56,7 @@ export default function Layanan() {
             <div className="font-Raleway font-reguler text-[24px] ">Karya</div>
           </div>
         </div>
-        <Swiper pagination={pagination} className="mySwiper swiper">
+        <Swiper pagination={pagination}  className="mySwiper swiper">
           <SwiperSlide className=" bg-[#F4F8FE]">
             <div className="w-[75%] h-[60%] flex items-center justify-center pb-12">
               <div className="w-[40%] h-full flex justfiy-center items-center">

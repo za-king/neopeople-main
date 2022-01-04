@@ -21,7 +21,7 @@ export default function event({ data }) {
       setPosts(res.data);
       setLoading(false);
     };
-
+    
     fetchPosts();
   }, []);
 
