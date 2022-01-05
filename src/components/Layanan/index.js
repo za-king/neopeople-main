@@ -57,7 +57,7 @@ export default function Layanan() {
           </div>
         </div>
         <Swiper pagination={pagination}  className="mySwiper swiper">
-          <SwiperSlide className=" bg-[#F4F8FE]">
+          <SwiperSlide id="1" className=" bg-[#F4F8FE]">
             <div className="w-[75%] h-[60%] flex items-center justify-center pb-12">
               <div className="w-[40%] h-full flex justfiy-center items-center">
                 <Image src={EventIMG}></Image>

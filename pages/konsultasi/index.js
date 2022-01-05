@@ -8,18 +8,106 @@ import {
   Toolbar,
   ViewSwitcher,
   MonthView,
-  DayView
+  DayView,
+  AppointmentTooltip,
 } from "@devexpress/dx-react-scheduler-material-ui";
 
+import IconButton from "@material-ui/core/IconButton";
+import MoreIcon from "@material-ui/icons/MoreVert";
+import Grid from "@material-ui/core/Grid";
+import Room from "@material-ui/icons/Room";
+import { Button } from "@mui/material";
+import { withStyles } from "@material-ui/core/styles";
+import classNames from "clsx";
+
 import { appointments } from "./appointments";
-import Layout from '../../src/components/Layout'
+import Layout from "../../src/components/Layout";
+
+const style = ({ palette }) => ({
+  icon: {
+    color: palette.action.active,
+  },
+  textCenter: {
+    textAlign: "center",
+  },
+  firstRoom: {
+    background:
+      "url(https://js.devexpress.com/Demos/DXHotels/Content/Pictures/Lobby-4.jpg)",
+  },
+  secondRoom: {
+    background:
+      "url(https://js.devexpress.com/Demos/DXHotels/Content/Pictures/MeetingRoom-4.jpg)",
+  },
+  thirdRoom: {
+    background:
+      "url(https://js.devexpress.com/Demos/DXHotels/Content/Pictures/MeetingRoom-0.jpg)",
+  },
+  header: {
+    height: "200px",
+    backgroundSize: "cover",
+  },
+  commandButton: {
+    backgroundColor: "rgba(255,255,255,0.65)",
+  },
+});
+
+const getClassByLocation = (classes, location) => {
+  if (location === "Room 1") return classes.firstRoom;
+  if (location === "Room 2") return classes.secondRoom;
+  return classes.thirdRoom;
+};
+
+const Header = withStyles(style, { name: "Header" })(
+  ({ children, appointmentData, classes, ...restProps }) => (
+    <AppointmentTooltip.Header
+      {...restProps}
+      className={classNames(
+        getClassByLocation(classes, appointmentData.location),
+        classes.header
+      )}
+      appointmentData={appointmentData}
+    >
+      <IconButton
+        /* eslint-disable-next-line no-alert */
+        onClick={() => alert(JSON.stringify(appointmentData))}
+        className={classes.commandButton}
+      >
+        <MoreIcon />
+      </IconButton>
+    </AppointmentTooltip.Header>
+  )
+);
+
+const Content = withStyles(style, { name: "Content" })(
+  ({ children, appointmentData, classes, ...restProps }) => (
+    <AppointmentTooltip.Content
+      {...restProps}
+      appointmentData={appointmentData}
+    >
+      <Grid container alignItems="center">
+        <Button item variant="contained">
+          Daftar
+        </Button>
+      </Grid>
+    </AppointmentTooltip.Content>
+  )
+);
+
+const CommandButton = withStyles(style, { name: "CommandButton" })(
+  ({ classes, ...restProps }) => (
+    <AppointmentTooltip.CommandButton
+      {...restProps}
+      className={classes.commandButton}
+    />
+  )
+);
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
       data: appointments,
-      currentViewName: "work-week"
+      currentViewName: "work-week",
     };
     this.currentViewNameChange = (currentViewName) => {
       this.setState({ currentViewName });
@@ -31,33 +119,37 @@ export default class Demo extends React.PureComponent {
 
     return (
       <Layout>
-        <Paper className='p-24'>
-        <Scheduler data={data} height={660}>
-          <ViewState
-            defaultCurrentDate="2018-07-25"
-            currentViewName={currentViewName}
-            onCurrentViewNameChange={this.currentViewNameChange}
-          />
+        <Paper className="p-24">
+          <Scheduler data={data} height={660}>
+            <ViewState
+              defaultCurrentDate="2018-07-25"
+              currentViewName={currentViewName}
+              onCurrentViewNameChange={this.currentViewNameChange}
+            />
 
-          <WeekView startDayHour={10} endDayHour={19} />
-          <WeekView
-            name="work-week"
-            displayName="Work Week"
-            excludedDays={[0, 6]}
-            startDayHour={9}
-            endDayHour={19}
-          />
-          <MonthView />
-          <DayView />
+            <WeekView startDayHour={10} endDayHour={19} />
+            <WeekView
+              name="work-week"
+              displayName="Work Week"
+              excludedDays={[0, 6]}
+              startDayHour={9}
+              endDayHour={19}
+            />
+            <MonthView />
+            <DayView />
 
-          <Toolbar />
-          <ViewSwitcher />
-          <Appointments />
-        </Scheduler>
-      </Paper>
-
+            <Toolbar />
+            <ViewSwitcher />
+            <Appointments />
+            <AppointmentTooltip
+              headerComponent={Header}
+              contentComponent={Content}
+              commandButtonComponent={CommandButton}
+              showCloseButton
+            />
+          </Scheduler>
+        </Paper>
       </Layout>
-      
     );
   }
 }
