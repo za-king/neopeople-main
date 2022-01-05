@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import Paper from "@material-ui/core/Paper";
 import { ViewState } from "@devexpress/dx-react-scheduler";
 import {
@@ -12,16 +13,15 @@ import {
   AppointmentTooltip,
 } from "@devexpress/dx-react-scheduler-material-ui";
 
-import IconButton from "@material-ui/core/IconButton";
-import MoreIcon from "@material-ui/icons/MoreVert";
+
 import Grid from "@material-ui/core/Grid";
-import Room from "@material-ui/icons/Room";
 import { Button } from "@mui/material";
 import { withStyles } from "@material-ui/core/styles";
 import classNames from "clsx";
 
 import { appointments } from "./appointments";
 import Layout from "../../src/components/Layout";
+import { data } from "autoprefixer";
 
 const style = ({ palette }) => ({
   icon: {
@@ -66,15 +66,7 @@ const Header = withStyles(style, { name: "Header" })(
         classes.header
       )}
       appointmentData={appointmentData}
-    >
-      <IconButton
-        /* eslint-disable-next-line no-alert */
-        onClick={() => alert(JSON.stringify(appointmentData))}
-        className={classes.commandButton}
-      >
-        <MoreIcon />
-      </IconButton>
-    </AppointmentTooltip.Header>
+    ></AppointmentTooltip.Header>
   )
 );
 
@@ -85,9 +77,11 @@ const Content = withStyles(style, { name: "Content" })(
       appointmentData={appointmentData}
     >
       <Grid container alignItems="center">
-        <Button item variant="contained">
-          Daftar
-        </Button>
+        <Link href={`/konsultasi/` + appointmentData.title  }>
+          <Button item variant="contained">
+            Daftar
+          </Button>
+        </Link>
       </Grid>
     </AppointmentTooltip.Content>
   )

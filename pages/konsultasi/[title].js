@@ -1,12 +1,13 @@
-import appointments from './appointments'
+
+import { useRouter } from 'next/router'
 
 
-export const getStaticPaths = async ()=>{
-    const data = appointments
-
-    const paths = data.map((a) =>{
-        return{
-            params: {}
-        }
-    })
+export default function detail() {
+    const router = useRouter()
+    const title =  router.query.title
+    return (
+        <div>
+            detail{title}
+        </div>
+    )
 }
