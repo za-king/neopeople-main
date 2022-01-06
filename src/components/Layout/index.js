@@ -15,11 +15,11 @@ export default function Layout(props) {
                 crossOrigin=""
             />
             </Head>
-            <body className="static h-screen">
-                
-                <div>{children}</div>
-                <Footer />
+            
+            <body className="h-screen">
                 <Header/>
+                <div >{children}</div>
+                <Footer />
             </body>
         </div>
     )

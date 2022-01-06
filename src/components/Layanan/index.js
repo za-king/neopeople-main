@@ -11,26 +11,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination ,Navigation} from "swiper";
+import SwiperCore, { Pagination ,Navigation, FreeMode,Thumbs} from "swiper";
 
 // install Swiper modules
-SwiperCore.use([Pagination ,Navigation]);
+SwiperCore.use([Pagination ,Navigation, FreeMode, Thumbs]);
 
 export default function Layanan() {
   const pagination = {
     clickable: true,
   };
-
-  const navigation = [{
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }]
+  
 
   const layananMenu =
     "w-[131px] flex justify-center items-center flex-col cursor-pointer";
 
   const [click ,setClick] =useState(false);
-
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   
 
   return (
@@ -43,20 +39,29 @@ export default function Layanan() {
         </div>
 
         <div className="w-[1080px] h-[10%] flex items-center pb-12 justify-center flex-row ">
-          <div className={layananMenu}>
-            <div className="font-Raleway font-reguler text-[24px]  ">Event</div>
-            <div className="w-full h-[2px] bg-[#FA1E0E]"></div>
-          </div>
-          <div className={layananMenu}  >
-            <div className="font-Raleway font-reguler text-[24px] " navigation={true}  >
-              Konseling
-            </div>
-          </div>
-          <div className={layananMenu}>
-            <div className="font-Raleway font-reguler text-[24px] ">Karya</div>
-          </div>
+          <Swiper onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={3} freeMode={true}>
+            <SwiperSlide>
+              <div className={layananMenu}>
+                <div className="font-Raleway font-reguler text-[24px]  ">Event</div>
+                <div className="w-full h-[2px] bg-[#FA1E0E]"></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={layananMenu}  >
+                <div className="font-Raleway font-reguler text-[24px] ">
+                  Konseling
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={layananMenu}>
+                <div className="font-Raleway font-reguler text-[24px] ">Karya</div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
-        <Swiper pagination={pagination}  className="mySwiper swiper">
+
+        <Swiper pagination={pagination}  thumbs={{ swiper: thumbsSwiper }} className="mySwiper swiper">
           <SwiperSlide className=" bg-[#F4F8FE]">
             <div className="w-[75%] h-[60%] flex items-center justify-center pb-12">
               <div className="w-[40%] h-full flex justfiy-center items-center">
