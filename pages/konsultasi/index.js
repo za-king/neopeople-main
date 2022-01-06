@@ -11,17 +11,18 @@ import {
   MonthView,
   DayView,
   AppointmentTooltip,
+  DateNavigator,
+  TodayButton,
 } from "@devexpress/dx-react-scheduler-material-ui";
-
 
 import Grid from "@material-ui/core/Grid";
 import { Button } from "@mui/material";
 import { withStyles } from "@material-ui/core/styles";
 import classNames from "clsx";
 
-import { appointments } from "./appointments";
+import { appointments , } from "./appointments";
 import Layout from "../../src/components/Layout";
-import { data } from "autoprefixer";
+
 
 const style = ({ palette }) => ({
   icon: {
@@ -77,7 +78,7 @@ const Content = withStyles(style, { name: "Content" })(
       appointmentData={appointmentData}
     >
       <Grid container alignItems="center">
-        <Link href={`/konsultasi/` + appointmentData.title  }>
+        <Link href={`/konsultasi/` + appointmentData.title}>
           <Button item variant="contained">
             Daftar
           </Button>
@@ -87,14 +88,7 @@ const Content = withStyles(style, { name: "Content" })(
   )
 );
 
-const CommandButton = withStyles(style, { name: "CommandButton" })(
-  ({ classes, ...restProps }) => (
-    <AppointmentTooltip.CommandButton
-      {...restProps}
-      className={classes.commandButton}
-    />
-  )
-);
+
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -110,11 +104,12 @@ export default class Demo extends React.PureComponent {
 
   render() {
     const { data, currentViewName } = this.state;
-
+    console.log(data)
     return (
       <Layout>
         <Paper className="p-24">
-          <Scheduler data={data} height={660}>
+          <Scheduler data={data} height={660} dateSerializationFormat="yyyy-MM-ddTHH:mm:ssZ">
+             
             <ViewState
               defaultCurrentDate="2018-07-25"
               currentViewName={currentViewName}
@@ -133,12 +128,13 @@ export default class Demo extends React.PureComponent {
             <DayView />
 
             <Toolbar />
+            <DateNavigator />
+            <TodayButton />
             <ViewSwitcher />
             <Appointments />
             <AppointmentTooltip
               headerComponent={Header}
               contentComponent={Content}
-              commandButtonComponent={CommandButton}
               showCloseButton
             />
           </Scheduler>
