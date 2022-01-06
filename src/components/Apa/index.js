@@ -33,7 +33,7 @@ export default function Apa() {
           </div>
           <div className="flex flex-col justify-center items-center px-48 pt-20 ">
             <div className="w-[1124.26px] h-[354px] bg-gray-300  rounded ">
-              <Swiper
+              {/* <Swiper
                 className="swiper "
                 slidesPerView={1}
                 spaceBetween={30}
@@ -99,7 +99,30 @@ export default function Apa() {
                     </div>
                   </div>
                 </SwiperSlide>
-              </Swiper>
+              </Swiper> */}
+                <div className="w-[full] h-full flex flex-row justify-center items-center">
+                    <div className="bg-[#E4E4E4] h-full w-[100%] flex flex-row justify-center items-center rounded">
+                      <div className="w-[30%] h-full bg-blue-200 relative overflow-hidden rounded">
+                        <Image src={Profile} height={100} layout="fill" />
+                      </div>
+                      <div className="w-[70%] px-8 flex justify-center flex-col items-center">
+                        <div className="flex w-full justify-start">
+                          <ImQuotesLeft size={60} />
+                        </div>
+                        <div className="text-left w-[90%]">
+                          Alhamdulillah setelah aku kenal Neo People ada
+                          perubahan hidup pelan-pelan seperti sekarang agak
+                          tegar kalau menghadapi masalah, terus lingkungan juga
+                          merasakan emosional aku lebih stabil. Terima kasih yaa
+                          Neo People sudah membentuk komunitas yang bermanfaat,
+                          semoga kita bisa selalu #tumbuhbersama
+                        </div>
+                        <div className="flex w-full justify-end">
+                          <ImQuotesRight size={60} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function Header() {
       {click && (
         <aside
           className=" bg-white w-64  h-full left-0  
-      inset-y-0 flex flex-col md:hidden fixed transform 
+      inset-y-0 flex flex-col md:hidden transform 
       translate-x-0 transition duration-200 ease-in-out
       "
         >
@@ -69,7 +69,7 @@ export default function Header() {
 
       <nav
         className="bg-white flex justify-between items-center h-16 text-black
-         fixed top-0 left-0 right-0 "
+          top-0 left-0 right-0"
       >
         <div className="px-4 cursor-pointer md:hidden" onClick={handleClick}>
           <div>
