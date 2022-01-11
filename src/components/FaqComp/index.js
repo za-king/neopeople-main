@@ -14,8 +14,14 @@ import { dataKonseling } from "./konseling";
 
 export default function FaqComp() {
   const datas = [dataProfile,dataMentoring,dataKonseling]
-
+  const buttonStyle ="bg-[#FFFFFF] hover:bg-[#FA1E0E]    shadow-2xl hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md "
+  const buttonStyleActive ="bg-[#FA1E0E] outline-none rounded-full   shadow-2xl  w-[100px] h-[36px] border-solid border-2 border-yellow-600 "
+  
   const [click, setClick] = useState(0);
+
+  const handleClick =(index) =>{
+    setClick(index)
+  }
 
   const [expanded, setExpanded] = React.useState(false);
 
@@ -30,13 +36,13 @@ export default function FaqComp() {
         </div>
 
         <div className="justify-center flex flex-row items-center p-5 space-x-4 mb-10">
-          <button onClick={()=>setClick(click = 0)} className="bg-[#FFFFFF] hover:bg-[#FA1E0E] focus:outline-none focus:bg focus:bg-[#FA1E0E] focus:rounded-full   shadow-2xl hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
+          <button onClick={()=>handleClick(0)} className={click === 0 ?buttonStyleActive :buttonStyle}>
             Profile
           </button>
-          <button onClick={()=>setClick(click = 1)}  className="bg-[#FFFFFF] hover:bg-[#FA1E0E] focus:outline-none focus:bg focus:bg-[#FA1E0E] focus:rounded-full   shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
+          <button onClick={()=>handleClick(1)} className={click === 1 ?buttonStyleActive :buttonStyle}>
             Mentoring
           </button>
-          <button onClick={()=>setClick(click = 2)} className="bg-[#FFFFFF] hover:bg-[#FA1E0E]  focus:outline-none focus:bg focus:bg-[#FA1E0E] focus:rounded-full shadow-2xl  hover:rounded-full w-[100px] h-[36px] border-solid border-2 border-yellow-600 rounded-md ">
+          <button onClick={()=>handleClick(2)} className={click === 2 ?buttonStyleActive :buttonStyle}>
             Konseling
           </button>
         </div>

@@ -40,11 +40,7 @@ export default function Header() {
                     Events
                   </Link>
                 </li>
-                <li className="p-3">
-                  <Link className="p-4" href="/blog">
-                    Blog
-                  </Link>
-                </li>
+                
                 <li className="p-3">
                   <Link className="p-4" href="/konsultasi">
                     konsultasi
@@ -69,7 +65,7 @@ export default function Header() {
 
       <nav
         className="bg-white flex justify-between items-center h-16 text-black
-          top-0 left-0 right-0"
+          top-0 left-0 right-0 "
       >
         <div className="px-4 cursor-pointer md:hidden" onClick={handleClick}>
           <div>
@@ -133,10 +129,6 @@ export default function Header() {
 
           <Link className="p-4" href="/eventpages">
             Events
-          </Link>
-
-          <Link className="p-4" href="/blog">
-            Blog
           </Link>
 
           <Link className="p-4" href="/konsultasi">
