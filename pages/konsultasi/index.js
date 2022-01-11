@@ -20,9 +20,11 @@ import { Button } from "@mui/material";
 import { withStyles } from "@material-ui/core/styles";
 import classNames from "clsx";
 
-import { appointments , } from "./appointments";
+import { appointments } from "./appointments";
 import Layout from "../../src/components/Layout";
 
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const style = ({ palette }) => ({
   icon: {
@@ -88,7 +90,6 @@ const Content = withStyles(style, { name: "Content" })(
   )
 );
 
-
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -104,12 +105,27 @@ export default class Demo extends React.PureComponent {
 
   render() {
     const { data, currentViewName } = this.state;
-    console.log(data)
+    function index() {
+      const [posts, setPosts] = useState([]);
+
+      useEffect(() => {
+        const fetchPosts = async () => {
+          const res = await axios.get("http://localhost:3000/api/hello");
+          setPosts(res.data);
+        };
+
+        fetchPosts();
+      }, []);
+    }
+
     return (
       <Layout>
         <Paper className="p-24">
-          <Scheduler data={data} height={660} dateSerializationFormat="yyyy-MM-ddTHH:mm:ssZ">
-             
+          <Scheduler
+            data={data}
+            height={660}
+            dateSerializationFormat="yyyy-MM-ddTHH:mm:ssZ"
+          >
             <ViewState
               defaultCurrentDate="2018-07-25"
               currentViewName={currentViewName}
