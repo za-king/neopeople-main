@@ -9,7 +9,7 @@ function index() {
     
     useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("http://104.199.125.194:3001/session");
+      const res = await axios.get("http://localhost:3004/konsul");
       setPosts(res.data);
     };
 
@@ -17,9 +17,15 @@ function index() {
   }, []);
 
   console.log(posts)
+
+  
     return (
         <div>
-            
+           {posts.map(a => {
+             return(<div key={a.id}>
+               {a.started_at}
+             </div>)
+           })} 
         </div>
     )
 }

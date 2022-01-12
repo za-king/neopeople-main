@@ -23,7 +23,7 @@ import classNames from "clsx";
 import { appointments } from "./appointments";
 import Layout from "../../src/components/Layout";
 
-import CustomStore from "devextreme/data/custom_store";
+import { useState } from "react";
 
 const style = ({ palette }) => ({
   icon: {
@@ -89,18 +89,6 @@ const Content = withStyles(style, { name: "Content" })(
   )
 );
 
-function getData(_, requestOptions) {
-  
-  const dataUrl = ["http://localhost:3000/api/hello"];
-
-  return fetch(dataUrl)
-    .then((response) => response.json())
-    .then((data) => data.items);
-}
-
-const dataSource = new CustomStore({
-  load: (options) => getData(options),
-});
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -116,7 +104,7 @@ export default class Demo extends React.PureComponent {
 
   render() {
     const { data, currentViewName } = this.state;
-
+  
     return (
       <Layout>
         <Paper className="p-24">
