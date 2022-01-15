@@ -21,15 +21,17 @@ export default function Layanan() {
     clickable: true,
   };
 
-  const layananMenu =" w-[131px] flex justify-center items-center flex-col cursor-pointer ";
-  const layananMenuActive ="bg-gray-300 w-[131px] flex justify-center items-center flex-col cursor-pointer rounded-xl";
+  const layananMenu =
+    " w-[131px] flex justify-center items-center flex-col cursor-pointer ";
+  const layananMenuActive =
+    "bg-gray-400 w-[130px] h-[30px] flex justify-center items-center flex-col cursor-pointer rounded-full shadow-2xl";
 
   const [click, setClick] = useState(1);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const handleClick = (index)=>{
-      setClick(index)
-  }
+  const handleClick = (index) => {
+    setClick(index);
+  };
   return (
     <>
       <div className=" bg-[#F4F8FE] h-[100vh] justify-center flex flex-col items-center">
@@ -39,7 +41,7 @@ export default function Layanan() {
           </div>
         </div>
 
-        <div className="w-[1080px] h-[10%] flex items-center pb-12 justify-center flex-row ">
+        <div className="w-[1080px] h-[20%] flex items-center pb-12 justify-center flex-row ">
           <Swiper
             onSwiper={setThumbsSwiper}
             spaceBetween={10}
@@ -48,21 +50,30 @@ export default function Layanan() {
           >
             <SwiperSlide className=" bg-[#F4F8FE] ">
               <div className={click === 1 ? layananMenuActive : layananMenu}>
-                <button onClick={() =>handleClick(1)} className="font-Raleway font-reguler text-[24px] ">
+                <button
+                  onClick={() => handleClick(1)}
+                  className="font-Raleway font-reguler text-[24px] "
+                >
                   Event
                 </button>
               </div>
             </SwiperSlide>
             <SwiperSlide className=" bg-[#F4F8FE]">
               <div className={click === 2 ? layananMenuActive : layananMenu}>
-                <button onClick={() =>handleClick(2)} className="font-Raleway font-reguler text-[24px] ">
+                <button
+                  onClick={() => handleClick(2)}
+                  className="font-Raleway font-reguler text-[24px] "
+                >
                   Konseling
                 </button>
               </div>
             </SwiperSlide>
             <SwiperSlide className=" bg-[#F4F8FE]">
               <div className={click === 3 ? layananMenuActive : layananMenu}>
-                <button onClick={() =>handleClick(3)} className="font-Raleway font-reguler text-[24px] ">
+                <button
+                  onClick={() => handleClick(3)}
+                  className="font-Raleway font-reguler text-[24px] "
+                >
                   Karya
                 </button>
               </div>
