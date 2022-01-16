@@ -16,7 +16,7 @@ export default function event({ data }) {
     const fetchPosts = async () => {
       setLoading(true);
       const res = await axios.get(
-        "https://jsonplaceholder.typicode.com/photos?_limit=100"
+        "http://104.199.125.194:3001/events"
       );
       setPosts(res.data);
       setLoading(false);

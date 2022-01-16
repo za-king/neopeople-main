@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev ",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "server":"json-server --watch db.json --port 3004"
   },
   "dependencies": {
     "@devexpress/dx-react-core": "^2.7.6",
@@ -17,6 +18,7 @@
     "@mui/material": "^5.2.2",
     "axios": "^0.24.0",
     "devextreme-react": "21.2.4",
+    "json-server": "^0.17.0",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

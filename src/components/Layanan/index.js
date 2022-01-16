@@ -11,24 +11,27 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination ,Navigation, FreeMode,Thumbs} from "swiper";
+import SwiperCore, { Pagination, Navigation, FreeMode, Thumbs } from "swiper";
 
 // install Swiper modules
-SwiperCore.use([Pagination ,Navigation, FreeMode, Thumbs]);
+SwiperCore.use([Pagination, Navigation, FreeMode, Thumbs]);
 
 export default function Layanan() {
   const pagination = {
     clickable: true,
   };
-  
 
   const layananMenu =
-    "w-[131px] flex justify-center items-center flex-col cursor-pointer";
+    " w-[131px] flex justify-center items-center flex-col cursor-pointer ";
+  const layananMenuActive =
+    "bg-gray-400 w-[130px] h-[30px] flex justify-center items-center flex-col cursor-pointer rounded-full shadow-2xl";
 
-  const [click ,setClick] =useState(false);
+  const [click, setClick] = useState(1);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  
 
+  const handleClick = (index) => {
+    setClick(index);
+  };
   return (
     <>
       <div className=" bg-[#F4F8FE] h-[100vh] justify-center flex flex-col items-center">
@@ -38,30 +41,51 @@ export default function Layanan() {
           </div>
         </div>
 
-        <div className="w-[1080px] h-[10%] flex items-center pb-12 justify-center flex-row ">
-          <Swiper onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={3} freeMode={true}>
-            <SwiperSlide>
-              <div className={layananMenu}>
-                <div className="font-Raleway font-reguler text-[24px]  ">Event</div>
-                <div className="w-full h-[2px] bg-[#FA1E0E]"></div>
+        <div className="w-[1080px] h-[20%] flex items-center pb-12 justify-center flex-row ">
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={10}
+            slidesPerView={3}
+            freeMode={true}
+          >
+            <SwiperSlide className=" bg-[#F4F8FE] ">
+              <div className={click === 1 ? layananMenuActive : layananMenu}>
+                <button
+                  onClick={() => handleClick(1)}
+                  className="font-Raleway font-reguler text-[24px] "
+                >
+                  Event
+                </button>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <div className={layananMenu}  >
-                <div className="font-Raleway font-reguler text-[24px] ">
+            <SwiperSlide className=" bg-[#F4F8FE]">
+              <div className={click === 2 ? layananMenuActive : layananMenu}>
+                <button
+                  onClick={() => handleClick(2)}
+                  className="font-Raleway font-reguler text-[24px] "
+                >
                   Konseling
-                </div>
+                </button>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <div className={layananMenu}>
-                <div className="font-Raleway font-reguler text-[24px] ">Karya</div>
+            <SwiperSlide className=" bg-[#F4F8FE]">
+              <div className={click === 3 ? layananMenuActive : layananMenu}>
+                <button
+                  onClick={() => handleClick(3)}
+                  className="font-Raleway font-reguler text-[24px] "
+                >
+                  Karya
+                </button>
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
 
-        <Swiper pagination={pagination}  thumbs={{ swiper: thumbsSwiper }} className="mySwiper swiper">
+        <Swiper
+          pagination={pagination}
+          thumbs={{ swiper: thumbsSwiper }}
+          className="mySwiper swiper"
+        >
           <SwiperSlide className=" bg-[#F4F8FE]">
             <div className="w-[75%] h-[60%] flex items-center justify-center pb-12">
               <div className="w-[40%] h-full flex justfiy-center items-center">

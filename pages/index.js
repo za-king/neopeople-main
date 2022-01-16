@@ -14,7 +14,7 @@ export default function Beranda() {
         <Layanan />
         <Apa />
         <Media />
-        <BlogComp />
+        {/* <BlogComp /> */}
         <Attention />
       </Layout>
     </>

@@ -38,19 +38,19 @@ const EventPosts = ({ posts, loading }) => {
         <div className="ml-12 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
           {posts.map((photo) => {
             return (
-              <Link href={`/eventpages/` + photo.id} key={photo.id}>
+              <Link href={`/eventpages/` + photo.ID} key={photo.id}>
                 <div className="my-10 flex bg-white w-[340px] h-[400px] rounded-lg drop-shadow-xl flex-col  cursor-pointer">
                   <div className="flex bg-gray-600  w-[340px] h-[250px] rounded-t-lg  ">
                     <img
                       className="flex  w-[340px] h-[250px] rounded-t-lg "
-                      src={photo.url}
+                      src={photo.cover}
                       alt="Mountain"
                     />
                   </div>
                   <div className=" py-2 pl-2 font-bold text-xl mb-2">
-                    {photo.albumId}
+                    {photo.price}
                   </div>
-                  <p className="text-gray-700 text-base pl-2">{photo.title}</p>
+                  <p className="text-gray-700 text-base pl-2">{photo.description}</p>
                 </div>
               </Link>
             );
