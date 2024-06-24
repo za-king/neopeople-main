@@ -12,7 +12,7 @@ import g6 from "../../../public/icons/6.png";
 import g7 from "../../../public/icons/7.png";
 import g8 from "../../../public/icons/8.png";
 
-import Fade from "react-reveal/Fade";
+
 export default function Media() {
   const sponsors = [
     Fitmind,
